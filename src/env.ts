@@ -3,7 +3,7 @@ export enum ENV {
   Production = "production",
 }
 
-// const environment: ENV = ENV.Development;
-const environment: ENV = ENV.Production;
+const environment: ENV = ENV.Development;
+// const environment: ENV = ENV.Production;
 
 export default environment;

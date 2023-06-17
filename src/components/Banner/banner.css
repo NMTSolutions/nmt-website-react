@@ -1,0 +1,43 @@
+.banner {
+  width: 100%;
+
+  display: flex;
+}
+
+.banner > * {
+  margin: 2rem 0;
+  width: 50%;
+  height: 30rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.banner > :nth-child(1) {
+  align-items: start;
+}
+
+.banner-heading div:nth-child(1) {
+  color: var(--accent);
+  font-size: xx-large;
+
+  margin-bottom: 1rem;
+}
+
+.banner-heading div:nth-child(2) {
+  color: var(--warning);
+  font-size: medium;
+
+  margin-bottom: 1rem;
+}
+
+.banner-heading .banner-actions > * + a {
+  margin-left: 1rem;
+}
+
+/* .banner-graphic img {
+  height: 100%;
+  width: 100%;
+} */

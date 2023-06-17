@@ -1,0 +1,178 @@
+.textfield {
+  margin: 1rem 0;
+
+  width: 100%;
+
+  position: relative;
+  z-index: 10;
+
+  transition: all 300ms;
+}
+
+.textfield > .textfield-label {
+  margin-left: 1rem;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 0;
+
+  color: var(--secondary);
+
+  transform: translateY(-50%);
+
+  transition: all 300ms;
+}
+
+.textfield > input,
+.textfield > textarea {
+  height: 100%;
+  width: 100%;
+
+  padding: 0.5rem 1rem;
+
+  border: none;
+  border-radius: 0.3rem;
+
+  background: var(--dark-inactive);
+
+  color: var(--secondary);
+  font-family: inherit;
+  font-size: medium;
+
+  transition: all 300ms;
+
+  position: relative;
+  z-index: 15;
+}
+
+.textfield > input:focus,
+.textfield > textarea:focus {
+  outline: none;
+
+  background: var(--dark-active);
+}
+
+.textfield-outlined > input:focus,
+.textfield-outlined > textarea:focus {
+  outline: 1px solid var(--secondary);
+}
+
+.textfield-filled > input,
+.textfield-filled > textarea {
+  border-radius: 0;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+
+  border-bottom: 2px solid var(--shadow);
+}
+
+.textfield-filled > input:focus,
+.textfield-filled > textarea:focus {
+  border-bottom-color: var(--secondary);
+}
+
+.textfield-standard > input,
+.textfield-standard > textarea {
+  background: transparent;
+
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid var(--shadow);
+}
+
+.textfield-standard > input:focus,
+.textfield-standard > textarea:focus {
+  background: transparent;
+
+  border-bottom-color: var(--secondary);
+}
+
+.textfield-native {
+  margin: 1rem auto;
+
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+}
+
+.textfield-native > input,
+.textfield-native > textarea {
+  width: 100%;
+
+  padding: 0.25rem 0.75rem;
+
+  font-family: inherit;
+  font-size: medium;
+}
+
+.textfield-native > .textfield-label {
+  position: absolute;
+  top: -20px;
+  left: 0;
+
+  font-weight: 600;
+  font-size: smaller;
+}
+
+.textfield > input:focus + .textfield-label,
+.textfield > textarea:focus + .textfield-label,
+.textfield > input:not(:placeholder-shown) + .textfield-label,
+.textfield > textarea:not(:placeholder-shown) + .textfield-label {
+  margin-left: 0;
+
+  top: -10px;
+  left: 5px;
+
+  font-weight: 600;
+  font-size: smaller;
+}
+
+/* .required-aestrick {
+  color: red;
+} */
+
+.textfield-error-text {
+  position: absolute;
+
+  bottom: -25px;
+  left: 5px;
+
+  color: red;
+  font-weight: 600;
+  font-size: smaller;
+}
+
+.textfield-outlined.textfield-error > input,
+.textfield-outlined.textfield-error > textarea {
+  outline: 1px solid;
+  outline-color: red !important;
+}
+
+.textfield-filled.textfield-error > input,
+.textfield-standard.textfield-error > input,
+.textfield-filled.textfield-error > textarea,
+.textfield-standard.textfield-error > textarea {
+  border-bottom-color: red;
+}
+
+.textfield-native.textfield-error > input,
+.textfield-native.textfield-error > textarea {
+  outline: 1px solid !important;
+  outline-color: red !important;
+}
+
+.textfield-error > .textfield-label {
+  color: red;
+}
+
+.textfield > input::placeholder,
+.textfield > textarea::placeholder {
+  opacity: 0;
+}
+
+.textfield > input:focused(::placeholder),
+.textfield > textarea:focused(::placeholder) {
+  opacity: 1;
+}

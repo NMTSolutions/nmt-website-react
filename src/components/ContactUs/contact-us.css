@@ -1,0 +1,62 @@
+.contact-us {
+  margin: 4rem 0;
+
+  display: flex;
+  justify-content: start;
+  align-items: start;
+
+  color: var(--secondary);
+}
+
+.contact-us > * {
+  width: 50%;
+}
+
+.contact-us h1 {
+  margin-bottom: 1rem;
+
+  font-size: xx-large;
+  color: var(--accent);
+}
+
+.contact-us article {
+  font-size: larger;
+}
+
+.contact-us article a {
+  margin-top: 1rem;
+
+  display: block;
+
+  color: var(--accent);
+  text-decoration: none;
+
+  cursor: pointer;
+}
+
+.contact-us article a:hover {
+  text-decoration: underline;
+}
+
+.get-in-touch {
+  padding: 2rem;
+
+  width: 50%;
+
+  background: var(--dark-inactive);
+  border-radius: 2rem;
+
+  box-shadow: 0 2px 4px var(--dark);
+}
+
+.get-in-touch .name-group,
+.get-in-touch .phone-group {
+  display: flex;
+
+  gap: 2rem;
+}
+.data-security {
+  margin-bottom: 0.5rem;
+
+  text-align: center;
+}

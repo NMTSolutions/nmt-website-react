@@ -1,0 +1,114 @@
+.circular-loader {
+  height: 2rem;
+  width: 2rem;
+
+  border: 5px solid var(--disabled);
+  border-radius: 50%;
+
+  border-top: 5px solid var(--secondary);
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.material-loader {
+  height: 3rem;
+  width: 3rem;
+}
+
+.material-loader-spinner {
+  animation: rotate 2s linear infinite;
+}
+
+.material-loader-path {
+  fill: none;
+  stroke-width: 5px;
+  stroke-linecap: square;
+  stroke: var(--secondary);
+
+  animation: animate-stroke 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-stroke {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -35;
+  }
+  100% {
+    stroke-dasharray: 89, 200;
+    stroke-dashoffset: -124;
+  }
+}
+
+.linear-loader {
+  width: 8rem;
+  height: 0.75rem;
+
+  background: var(--disabled);
+
+  position: relative;
+
+  border-radius: 50px;
+}
+
+.linear-loader::after {
+  content: "";
+
+  width: 25%;
+
+  border-radius: 50px;
+
+  background: var(--secondary);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  animation: slide 1s ease-in-out infinite;
+}
+
+@keyframes slide {
+  0% {
+    right: 100%;
+    left: 0;
+
+    width: 25%;
+  }
+  25% {
+    width: 50%;
+  }
+  50% {
+    right: 0;
+    left: 75%;
+
+    width: 25%;
+  }
+  75% {
+    width: 50%;
+  }
+  100% {
+    right: 100%;
+    left: 0;
+
+    width: 25%;
+  }
+}

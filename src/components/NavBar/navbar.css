@@ -1,0 +1,79 @@
+.nav {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-heading {
+  color: var(--accent);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-heading > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-heading img {
+  height: 3rem;
+  width: 10rem;
+
+  cursor: pointer;
+}
+
+.nav-account-actions {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-tabs > * + button,
+.nav-account-actions > * + button {
+  margin-left: 1rem;
+}
+
+.nav-tabs button > a {
+  text-decoration: none;
+
+  display: inline-block;
+
+  color: inherit;
+
+  height: 100%;
+  width: 100%;
+}
+
+.signin-form + * {
+  margin-top: 2.5rem;
+}
+
+.signup-form > * {
+  display: flex;
+  gap: 1rem;
+}
+
+.signup-form + * {
+  margin-top: 0.5rem;
+}
+
+.signup-form .terms {
+  display: flex;
+  align-items: center;
+}
+
+.signup-form .terms > input[type="checkbox"] {
+  height: 3rem;
+
+  cursor: pointer;
+}
+.signup-form .terms > label {
+  color: var(--secondary);
+
+  cursor: pointer;
+}

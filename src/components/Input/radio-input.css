@@ -1,0 +1,152 @@
+.input-radio {
+  display: inline-block;
+
+  position: relative;
+  z-index: 0;
+
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.87);
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Input */
+.input-radio > input {
+  margin: 0;
+
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+
+  position: absolute;
+  z-index: -1;
+  left: -10px;
+  top: -8px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+
+  outline: none;
+
+  opacity: 0;
+
+  transform: scale(1);
+  transition: opacity 0.3s, transform 0.2s;
+
+  pointer-events: none;
+}
+
+/* Span */
+.input-radio > span {
+  display: inline-block;
+
+  width: 100%;
+
+  cursor: pointer;
+}
+
+/* Circle */
+.input-radio > span::before {
+  content: "";
+
+  display: inline-block;
+
+  box-sizing: border-box;
+
+  margin: 2px 10px 2px 0;
+
+  border: solid 2px; /* Safari */
+  border-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.6);
+  border-radius: 50%;
+
+  width: 20px;
+  height: 20px;
+
+  vertical-align: top;
+
+  transition: border-color 0.2s;
+}
+
+/* Check */
+.input-radio > span::after {
+  content: "";
+
+  display: block;
+
+  position: absolute;
+  top: 2px;
+  left: 0;
+
+  border-radius: 50%;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+
+  transform: translate(5px, 5px) scale(0);
+  transition: transform 0.2s;
+}
+
+/* Checked */
+.input-radio > input:checked {
+  background-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+.input-radio > input:checked + span::before {
+  border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+.input-radio > input:checked + span::after {
+  transform: translate(5px, 5px) scale(1);
+}
+
+/* Hover, Focus */
+.input-radio:hover > input {
+  opacity: 0.04;
+}
+
+.input-radio > input:focus {
+  opacity: 0.12;
+}
+
+.input-radio:hover > input:focus {
+  opacity: 0.16;
+}
+
+/* Active */
+.input-radio > input:active {
+  opacity: 1;
+
+  transform: scale(0);
+  transition: transform 0s, opacity 0s;
+}
+
+.input-radio > input:active + span::before {
+  border-color: rgb(var(--pure-material-primary-rgb, 33, 150, 243));
+}
+
+/* Disabled */
+.input-radio > input:disabled {
+  opacity: 0;
+}
+
+.input-radio > input:disabled + span {
+  color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+
+  cursor: initial;
+}
+
+.input-radio > input:disabled + span::before {
+  border-color: currentColor;
+}
+
+.input-radio > input:disabled + span::after {
+  background-color: currentColor;
+}

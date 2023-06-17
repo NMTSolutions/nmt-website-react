@@ -1,0 +1,16 @@
+.about-us {
+  margin: 2rem 0;
+  color: var(--secondary);
+}
+
+.about-us > h1 {
+  font-size: xx-large;
+}
+
+.about-us > * {
+  margin: 2rem 0;
+}
+
+.about-us .contact-us div h1 {
+  color: var(--secondary);
+}

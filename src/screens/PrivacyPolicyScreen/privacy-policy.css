@@ -1,0 +1,20 @@
+.privacy-policy {
+  margin: 2rem 0;
+  color: var(--secondary);
+}
+
+.privacy-policy section h1 {
+  font-size: xx-large;
+
+  margin: 2rem 0;
+}
+
+.privacy-policy section h4 {
+  font-size: large;
+}
+
+.privacy-policy section h3 a {
+  text-decoration: underline;
+
+  color: var(--accent);
+}
